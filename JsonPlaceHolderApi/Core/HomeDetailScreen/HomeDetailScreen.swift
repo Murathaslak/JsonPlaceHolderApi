@@ -14,7 +14,7 @@ protocol HomeDetailScreenInterface: AnyObject {
 
 final class HomeDetailScreen: UIViewController {
     
-    private let user: UserElement
+    let user: UserElement
     private let viewModel = HomeDetailScreenViewModel()
     private let userDetailCard = UserDetailCardView()
     

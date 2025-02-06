@@ -17,6 +17,10 @@ final class HomeScreenViewModel {
     weak var view: HomeScreenInterface?
     private let service = UserService()
     var userList: [UserElement] = []
+    
+    init(view: HomeScreenInterface? = nil) {
+        self.view = view
+    }
 }
 
 extension HomeScreenViewModel: HomeScreenViewModelInterface {

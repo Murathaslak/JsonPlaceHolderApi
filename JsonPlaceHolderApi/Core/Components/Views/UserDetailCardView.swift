@@ -9,6 +9,7 @@
 import UIKit
 import MapKit
 
+// MARK: - UserDetailCardView
 class UserDetailCardView: UIView {
     
     private let profileImageView: UIImageView = {

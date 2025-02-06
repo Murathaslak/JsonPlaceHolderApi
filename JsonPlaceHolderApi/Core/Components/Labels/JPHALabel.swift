@@ -7,6 +7,7 @@
 
 import UIKit
 
+// MARK: - JPHALabel
 class JPHALabel: UILabel {
 
     override init(frame: CGRect) {

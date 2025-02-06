@@ -7,18 +7,18 @@
 
 import UIKit
 
-// Mark: Sadece classlara uygulanabilirliğinden emin olmak için AnyObject
+// Sadece classlara uygulanabilirliğinden emin olmak için AnyObject conform ediyoruz
 protocol HomeScreenInterface: AnyObject {
     func configureVC()
     func configureTableView()
     func reloadTableViewData()
 }
 
-final class HomeScreen: UIViewController {
+class HomeScreen: UIViewController {
     
-    private let viewModel = HomeScreenViewModel()
+    let viewModel = HomeScreenViewModel()
     
-    private var usersTableView: UITableView!
+    var usersTableView = UITableView()
     
     override func viewDidLoad() {
         super.viewDidLoad()

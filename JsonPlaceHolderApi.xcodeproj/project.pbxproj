@@ -6,8 +6,19 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXContainerItemProxy section */
+		468AE9602D54EF4100AE567D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 468AE8D72D53CE9600AE567D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 468AE8DE2D53CE9600AE567D;
+			remoteInfo = JsonPlaceHolderApi;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		468AE8DF2D53CE9600AE567D /* JsonPlaceHolderApi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JsonPlaceHolderApi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		468AE95C2D54EF4100AE567D /* JsonPlaceHolderApiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JsonPlaceHolderApiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -29,10 +40,22 @@
 			path = JsonPlaceHolderApi;
 			sourceTree = "<group>";
 		};
+		468AE95D2D54EF4100AE567D /* JsonPlaceHolderApiTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = JsonPlaceHolderApiTests;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		468AE8DC2D53CE9600AE567D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		468AE9592D54EF4100AE567D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -46,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				468AE8E12D53CE9600AE567D /* JsonPlaceHolderApi */,
+				468AE95D2D54EF4100AE567D /* JsonPlaceHolderApiTests */,
 				468AE8E02D53CE9600AE567D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				468AE8DF2D53CE9600AE567D /* JsonPlaceHolderApi.app */,
+				468AE95C2D54EF4100AE567D /* JsonPlaceHolderApiTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -83,6 +108,29 @@
 			productReference = 468AE8DF2D53CE9600AE567D /* JsonPlaceHolderApi.app */;
 			productType = "com.apple.product-type.application";
 		};
+		468AE95B2D54EF4100AE567D /* JsonPlaceHolderApiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 468AE9642D54EF4100AE567D /* Build configuration list for PBXNativeTarget "JsonPlaceHolderApiTests" */;
+			buildPhases = (
+				468AE9582D54EF4100AE567D /* Sources */,
+				468AE9592D54EF4100AE567D /* Frameworks */,
+				468AE95A2D54EF4100AE567D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				468AE9612D54EF4100AE567D /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				468AE95D2D54EF4100AE567D /* JsonPlaceHolderApiTests */,
+			);
+			name = JsonPlaceHolderApiTests;
+			packageProductDependencies = (
+			);
+			productName = JsonPlaceHolderApiTests;
+			productReference = 468AE95C2D54EF4100AE567D /* JsonPlaceHolderApiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -95,6 +143,10 @@
 				TargetAttributes = {
 					468AE8DE2D53CE9600AE567D = {
 						CreatedOnToolsVersion = 16.2;
+					};
+					468AE95B2D54EF4100AE567D = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 468AE8DE2D53CE9600AE567D;
 					};
 				};
 			};
@@ -113,12 +165,20 @@
 			projectRoot = "";
 			targets = (
 				468AE8DE2D53CE9600AE567D /* JsonPlaceHolderApi */,
+				468AE95B2D54EF4100AE567D /* JsonPlaceHolderApiTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		468AE8DD2D53CE9600AE567D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		468AE95A2D54EF4100AE567D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -135,7 +195,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		468AE9582D54EF4100AE567D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		468AE9612D54EF4100AE567D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 468AE8DE2D53CE9600AE567D /* JsonPlaceHolderApi */;
+			targetProxy = 468AE9602D54EF4100AE567D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		468AE8F32D53CE9800AE567D /* Debug */ = {
@@ -311,6 +386,42 @@
 			};
 			name = Release;
 		};
+		468AE9622D54EF4100AE567D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9G7B4YDXYH;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.murathaslak.JsonPlaceHolderApiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JsonPlaceHolderApi.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/JsonPlaceHolderApi";
+			};
+			name = Debug;
+		};
+		468AE9632D54EF4100AE567D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9G7B4YDXYH;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.murathaslak.JsonPlaceHolderApiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JsonPlaceHolderApi.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/JsonPlaceHolderApi";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -328,6 +439,15 @@
 			buildConfigurations = (
 				468AE8F32D53CE9800AE567D /* Debug */,
 				468AE8F42D53CE9800AE567D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		468AE9642D54EF4100AE567D /* Build configuration list for PBXNativeTarget "JsonPlaceHolderApiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				468AE9622D54EF4100AE567D /* Debug */,
+				468AE9632D54EF4100AE567D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
