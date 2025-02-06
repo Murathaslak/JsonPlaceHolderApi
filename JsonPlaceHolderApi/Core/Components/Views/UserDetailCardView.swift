@@ -7,6 +7,7 @@
 
 
 import UIKit
+import MapKit
 
 class UserDetailCardView: UIView {
     
@@ -25,6 +26,15 @@ class UserDetailCardView: UIView {
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
+    
+    private let mapView: MKMapView = {
+        let map = MKMapView()
+        map.translatesAutoresizingMaskIntoConstraints = false
+        map.layer.cornerRadius = 10
+        map.clipsToBounds = true
+        return map
+    }()
+
     
     private let nameLabel = JPHALabel(textAlignment: .center, fontSize: 14, weight: .bold)
     private let usernameLabel = JPHALabel(textAlignment: .center, fontSize: 12, weight: .semibold)
@@ -67,6 +77,9 @@ class UserDetailCardView: UIView {
         addSubview(companyName)
         addSubview(companyCatchPhrase)
         addSubview(companyBs)
+        
+        addSubview(mapView)
+
 
         NSLayoutConstraint.activate([
             profileImageView.topAnchor.constraint(equalTo: topAnchor, constant: 40),
@@ -123,10 +136,30 @@ class UserDetailCardView: UIView {
             companyBs.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             companyBs.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
             
-            
+            mapView.topAnchor.constraint(equalTo: companyBs.bottomAnchor, constant: 12),
+            mapView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
+            mapView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
+            mapView.heightAnchor.constraint(equalToConstant: 200),
             
         ])
     }
+    
+    private func showLocationOnMap(latitude: Double, longitude: Double) {
+        let coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+
+        let region = MKCoordinateRegion(
+            center: coordinate,
+            span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+        )
+        
+        mapView.setRegion(region, animated: true)
+
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = coordinate
+        annotation.title = "Adres"
+        mapView.addAnnotation(annotation)
+    }
+
     
     func configure(with user: UserElement) {
         nameLabel.text = user.name
@@ -140,6 +173,10 @@ class UserDetailCardView: UIView {
         companyName.text = "🏢 \(user.company.name)"
         companyBs.text = "📈 \(user.company.bs)"
         companyCatchPhrase.text = "💡 \(user.company.catchPhrase)"
+        
+        if let lat = Double(user.address.geo.lat), let lng = Double(user.address.geo.lng) {
+            showLocationOnMap(latitude: lat, longitude: lng)
+        }
 
     }
 }
