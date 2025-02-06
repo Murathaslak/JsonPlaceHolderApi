@@ -7,6 +7,7 @@
 
 import Foundation
 
+// MARK: - UserService
 class UserService {
     
     func downloadUsers(completion: @escaping([UserElement]?) -> ()) {
